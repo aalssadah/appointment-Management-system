@@ -2,12 +2,10 @@
 
 namespace App\Models;
 
-use Guava\Calendar\Contracts\Eventable;
-use Guava\Calendar\ValueObjects\Event;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reservation extends Model implements Eventable
+class Reservation extends Model
 {
     use HasFactory;
 
