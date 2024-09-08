@@ -35,10 +35,10 @@ class CalendarWidget extends FullCalendarWidget
 //        dd(FilamentFullCalendarPlugin::get()->getConfig());
 //        dd($fetchInfo);
         return Reservation::query()
-//            ->where('starts_at', '>=', $fetchInfo['start'])
-//            ->where('ends_at', '<=', $fetchInfo['end'])
-            ->where('starts_at', '>=','2024-09-01 11:59:57')// $fetchInfo['start'])
-            ->where('ends_at', '<=','2024-09-08 11:59:57')//$fetchInfo['end'])
+            ->where('starts_at', '>=', $fetchInfo['start'])
+            ->where('ends_at', '<=', $fetchInfo['end'])
+//            ->where('starts_at', '>=','2024-09-01 11:59:57')// $fetchInfo['start'])
+//            ->where('ends_at', '<=','2024-09-08 11:59:57')//$fetchInfo['end'])
             ->get()
             ->map(
                 fn (Reservation $event) => [
