@@ -31,9 +31,7 @@ class CalendarWidget extends FullCalendarWidget
 
     public function fetchEvents(array $fetchInfo): array
     {
-//        dd(FilamentFullCalendarPlugin::make()->config(['weekends=>true'])->getConfig());
-//        dd(FilamentFullCalendarPlugin::get()->getConfig());
-//        dd($fetchInfo);
+
         return Reservation::query()
             ->where('starts_at', '>=', $fetchInfo['start'])
             ->where('ends_at', '<=', $fetchInfo['end'])
